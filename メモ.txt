@@ -1,0 +1,32 @@
+サービスとしての価値
+サービスの完成度
+
+次のステップ
+
+
+機能
+日記投稿画面
+チャット画面
+
+supabaseクライアントを作るなら
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+
+export const supabase = createClient(supabaseUrl, supabaseKey)
+
+
+supabaseCliantはそのままでいいのか
+
+apiエンドポイント
+ローカル変数だから
+
+create table users (
+  id uuid primary key default gen_random_uuid(),
+  username text,
+  email text unique not null,
+  password text not null,
+  profile_image text
+);
+aaa
